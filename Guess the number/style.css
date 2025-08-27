@@ -17,6 +17,7 @@ body {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 20px rgba(99, 255, 8, 0.5);
+  margin: 0 15px;
 }
 h1{
  color: #63ff08;

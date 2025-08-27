@@ -74,7 +74,6 @@ restart.addEventListener("click", function () {
     attempt = 0;
     attempts.textContent = attempt
     message.textContent = ""
-    guess = parseInt(Math.random() * 100 + 1);
     input.value = ""
     check.disabled = false;
     input.disabled = false;
