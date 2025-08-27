@@ -1,0 +1,123 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: "Segoe UI", Tahoma, sans-serif;
+     background: linear-gradient(135deg, #1f1f1f, #121212);
+     color: #ffffff;
+     display: flex;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .container {
+     width: 90%;
+     max-width: 500px;
+     background: rgba(255, 255, 255, 0.05);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+     border-radius: 16px;
+     padding: 30px;
+ }
+
+ h1 {
+     text-align: center;
+     margin-bottom: 30px;
+     font-size: 36px;
+     color: #00d4ff;
+ }
+
+ .first {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 20px;
+ }
+
+ #input {
+     width: 100%;
+     padding: 12px;
+     font-size: 16px;
+     border: none;
+     border-radius: 8px;
+     background: #343434;
+     color: white;
+     outline: none;
+ }
+
+ #addbtn {
+     padding: 12px 20px;
+     background-color: #1d9929;
+     border: none;
+     border-radius: 8px;
+     color: white;
+     font-size: 15px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background 0.3s;
+ }
+
+ #addbtn:hover {
+     background-color: #12e027;
+ }
+
+ #empty {
+     text-align: center;
+     font-size: 18px;
+     color: #ff0000;
+ }
+
+ .todo-container {
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+     margin-top: 10px;
+ }
+
+ .todo {
+     background: #1e1e1e;
+     padding: 12px 15px;
+     border: none;
+     border-radius: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     transition: 0.3s;
+ }
+
+ .todo:hover {
+     background: #2b2b2b;
+ }
+
+ .btns {
+     display: flex;
+     gap: 10px;
+ }
+
+ .btns button {
+     border: none;
+     color: white;
+     padding: 6px 10px;
+     border-radius: 6px;
+     cursor: pointer;
+     font-size: 14px;
+     transition: 0.3s;
+ }
+
+ .btns .edit {
+     background-color: #09c71c;
+ }
+
+ .btns .delete {
+     background-color: #ff0000;
+ }
+
+ .btns .edit:hover {
+     background-color: #068e14;
+ }
+
+ .btns .delete:hover {
+     background-color: #a60808;
+ }

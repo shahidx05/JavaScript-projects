@@ -1,0 +1,124 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', sans-serif;
+ }
+
+
+ body {
+     display: flex;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+     background-color: ;
+      background: linear-gradient(135deg, #FAD691, #ea977b);
+ }
+
+ .container {
+     background-color: white;
+     padding: 25px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: auto;
+     width: 100%;
+     max-width: 400px;
+     border-radius: 8px;
+ }
+
+ h1 {
+     font-weight: 600;
+     font-size: 28px;
+     margin-bottom: 30px;
+ }
+
+ .form {
+     width: 100%;
+ }
+
+ .form input {
+     width: 100%;
+     padding: 10px;
+     font-size: 16px;
+     margin: 10px auto;
+     border-radius: 8px;
+     border: 1px solid rgb(174, 166, 166);
+ }
+
+ .mid {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin: 10px 0;
+ }
+
+
+ .fromcont>div,
+ .tocont>div {
+     border: 1px solid rgb(157, 155, 155);
+     border-radius: 5px;
+     display: flex;
+     align-items: center;
+     padding: 0 2px;
+     margin-top: 5px;
+ }
+
+
+ .fromcont img,
+ .tocont img {
+     width: 28px;
+ }
+
+ .fromcont select,
+ .tocont select {
+     border: none;
+    background: transparent;
+    padding: 3px;
+    font-size: 15px;
+ }
+
+select:focus { 
+  outline: none;   
+}
+
+ #arrow {
+     margin-top: 1rem;
+    font-size: 1.5rem;
+ }
+
+ .msg {
+     margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+ }
+
+ .btn {
+     width: 100%;
+     padding: 15px;
+     background-color: #ED775A;
+     color: white;
+     font-size: 15px;
+     border: none;
+     margin: 15px 0;
+     border-radius: 8px;
+     transition: background 0.2s ease;
+ }
+
+ .btn:hover{
+    background-color:  #ff643d;
+ }
+ .btn:active{
+    background-color: rgb(248, 163, 78);
+ }
+
+ #arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#arrow.active {
+    transform: rotate(180deg);
+}

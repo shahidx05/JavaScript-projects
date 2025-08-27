@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #1e1e2f;
+            padding: 25px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+        }
+
+        p {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: #f49f01;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 8px;
+            color: #00d8ff;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #9effa1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Your Local Time</p>
+        <div>
+            <h1></h1>
+            <h2></h2>
+        </div>
+    </div>
+    <script>
+        const time = document.querySelector('h1')
+        const date = document.querySelector('h2')
+
+        function update() {
+            let now = new Date();
+            time.textContent = now.toLocaleTimeString();
+            date.textContent = now.toDateString();
+        }
+
+        update();
+        setInterval(update, 1000)
+    </script>
+</body>
+
+</html>

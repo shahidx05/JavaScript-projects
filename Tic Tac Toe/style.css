@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181a21;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: hsla(75, 95%, 48%, 0.829);
+}
+
+h3{
+    text-align: center;
+    color: rgba(255, 0, 238, 1);
+    font-size: 22px;
+    font-weight: 400;
+    margin: 30px auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 260px;
+    margin: 0 auto;
+}
+
+
+.box {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    background-color: #393a4d;
+    font-size: 45px;
+    text-align: center;
+    color: rgb(255, 157, 0);
+
+}
+
+.box:hover {
+    background-color: #3f4377;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 25px auto;
+    text-align: center;
+    color: hsl(129, 100%, 50%);
+    font-size: 26px;
+    font-weight: 400;
+    display: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    gap: 10px;
+}
+
+.reset {
+    width: 110px;
+    height: 47px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2540d7;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.reset-all {
+    width: 110px;
+    height: 47px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.box:disabled {
+    background-color: #292929;
+}
+
+.win-x {
+  box-shadow: 0 0 10px 2px rgba(255, 0, 238, 1);
+   transition: 0.3s;
+}
+.win-o {
+    box-shadow: 0 0 10px 2px rgba(0, 255, 238, 1);
+     transition: 0.3s;
+}
+
+.scoreboard {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #9a94f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.scoreboard p {
+  margin: 5px 0;
+  display: flex;
+  gap: 10px;
+}

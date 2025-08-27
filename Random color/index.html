@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+    <style>
+        body {
+            background-color: #161616;
+            transition: background-color 0.8s ease;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #444;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #666;
+        }
+
+        button:disabled {
+            background: #222;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        const start = document.querySelector("#start")
+        const stop = document.querySelector("#stop")
+        const body = document.querySelector("body");
+
+        const randcolor = () => {
+            const hex = "0123456789ABCDEF"
+            let color = "#"
+            for (let i = 0; i < 6; i++) {
+                let num = Math.floor(Math.random() * 16);
+                color += hex[num]
+            }
+            return color;
+        }
+
+        let change;
+
+        start.addEventListener("click", function () {
+            if (!change) {
+                change = setInterval(() => {
+                    body.style.backgroundColor = randcolor()
+                }, 1000)
+                start.disabled = true;
+                stop.disabled = false;
+            }
+        })
+        stop.addEventListener("click", function () {
+            clearInterval(change);
+            change = null;
+            start.disabled = false;
+            stop.disabled = true;
+        })
+
+    </script>
+</body>
+
+</html>
