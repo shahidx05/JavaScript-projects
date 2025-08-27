@@ -1,3 +1,9 @@
+# JavaScript Projects 🚀
+
+This repository contains a collection of small JavaScript projects built using **HTML, CSS, and JavaScript**.  
+These projects helped me practice DOM manipulation, events, and core JS concepts.
+
+---
 
 ## 📂 Projects Included
 
@@ -19,7 +25,16 @@
    🔗 [Live Demo](https://shahidx05.github.io/JavaScript-projects/Tic%20Tac%20Toe/)
 9. **Number Guessing Game** 🔢 – Guess the secret number with hints.
    🔗 [Live Demo](https://shahidx05.github.io/JavaScript-projects/Guess%20the%20number/)
-   
+
+---
+
+---
+
+## 🛠️ Tech Stack
+- HTML
+- CSS
+- JavaScript
+
 ---
 
 @@ -29,4 +46,4 @@ These projects helped me practice DOM manipulation, events, and core JS concepts
