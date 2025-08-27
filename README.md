@@ -28,8 +28,6 @@ These projects helped me practice DOM manipulation, events, and core JS concepts
 
 ---
 
----
-
 ## 🛠️ Tech Stack
 - HTML
 - CSS
