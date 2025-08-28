@@ -17,7 +17,7 @@ These projects helped me practice DOM manipulation, events, and core JS concepts
    🔗 [Live Demo](https://shahidx05.github.io/JavaScript-projects/Currency%20Convertor/)
 5. **Digital Clock** ⏰ – Displays real-time clock in dark theme.
    🔗 [Live Demo](https://shahidx05.github.io/JavaScript-projects/Digital%20Clock/)
-6. **Card Creater**  – Create a card of person from taking input as name, email, image url, info.
+6. **Card Creator**  – Create a card of person from taking input as name, email, image url, info.
    🔗 [Live Demo](https://shahidx05.github.io/JavaScript-projects/Card%20Creater/)
 7. **Random Color Generator** 🎨 – Generate random colors with HEX/RGB codes.
    🔗 [Live Demo](https://shahidx05.github.io/JavaScript-projects/Random%20color/)
@@ -35,9 +35,8 @@ These projects helped me practice DOM manipulation, events, and core JS concepts
 
 ---
 
-@@ -29,4 +46,4 @@ These projects helped me practice DOM manipulation, events, and core JS concepts
 ## 🚀 How to Run
 1. Clone the repo:
 ```bash
-   git clone https://github.com/your-username/JavaScript-Projects.git
-   git clone https://github.com/shahidx05/JavaScript-Projects.git
+git clone https://github.com/shahidx05/JavaScript-Projects.git
+```
