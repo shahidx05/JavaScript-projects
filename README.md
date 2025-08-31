@@ -10,14 +10,24 @@ These projects helped me practice DOM manipulation, events, and core JS concepts
 
 ---
 
+## 🛠️ Tech Stack
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
+
+---
+
 ## 📸 Preview  
-![Netflix Clone Screenshot](demo.png)
+[![All projects preview Screenshot](demo.png)](https://java-script-projects-x05.vercel.app/)
+*Interactive projects are best viewed on the live demos!*
+
+👉 [All Projects at One Place](https://java-script-projects-x05.vercel.app/)
 
 ---
 
 ## 📂 Projects Included
 
-1. **Weather App** 🌦️ – Get real-time weather updates using an API.
+1. **Weather App** 🌦️ – Get real-time weather updates using an API.  
    🔗 [Live Demo](https://java-script-projects-x05.vercel.app/Weather%20App/)
 
 2. **To-Do List** ✅ – Add, edit, delete daily tasks.
@@ -43,13 +53,6 @@ These projects helped me practice DOM manipulation, events, and core JS concepts
 
 9. **Number Guessing Game** 🔢 – Guess the secret number with hints.
    🔗 [Live Demo](https://java-script-projects-x05.vercel.app/Guess%20the%20number/)
-
----
-
-## 🛠️ Tech Stack
-- HTML
-- CSS
-- JavaScript
 
 ---
 
