@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      text-align: center;
+      background: linear-gradient(90deg, #00c6ff, #ff6ec4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .socials a {
+      color: #fff;
+      font-size: 1.6rem;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #00c6ff;
+      transform: scale(1.2);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.05);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    .card span {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> HTML-CSS-JS Projects</h1>
+    <div class="socials">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/yourusername" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </header>
+
+  <div class="projects">
+    <a class="card" href="Weather App/"><span>🌦</span> Weather App</a>
+    <a class="card" href="To Do APP/"><span>📝</span> Todo App</a>
+    <a class="card" href="Currency Converter/"><span>💱</span> Currency Converter</a>
+    <a class="card" href="Guess the number/"><span>🔢</span> Guess Number Game</a>
+    <a class="card" href="Tic Tac Toe/"><span>❌⭕</span> Tic Tac Toe</a>
+    <a class="card" href="Calculator/"><span>🧮</span> Calculator</a>
+    <a class="card" href="Digital Clock/"><span>🕒</span> Digital Clock</a>
+    <a class="card" href="Random color/"><span>🎨</span> Random Color Generator</a>
+    <a class="card" href="Card Creater/"><span>📇</span> Profile Card Maker</a>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by  Shahid Khan</p>
+  </footer>
+</body>
+</html>
