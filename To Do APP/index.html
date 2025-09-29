@@ -13,17 +13,23 @@
         <h1>Todo App</h1>
         <div class="first">
             <input id="input" placeholder="Add a new todo...">
-            <button id="addbtn">Add</button>
+            <button type="button" id="addbtn">Add</button>
         </div>
+
+        <div class="middle">
+            <div>
+                <div class="filters">
+                    <a class="active">All</a>
+                    <a>Completed</a>
+                    <a>Pending</a>
+                </div>
+            </div>
+            <a class="deleteall">🗑 Clear Completed</a>
+        </div>
+        
         <p id="empty">No todos yet!</p>
         <div class="todo-container">
-            <!-- <div class="todo">
-                <span>coding</span>
-                <div class="btns">
-                    <button class="edit">Edit</button>
-                    <button class="delete">delete</button>
-                </div>
-            </div> -->
+            
         </div>
     </div>
     <script src="script.js"></script>

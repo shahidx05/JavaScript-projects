@@ -6,12 +6,11 @@
 
  body {
      font-family: "Segoe UI", Tahoma, sans-serif;
-     background: linear-gradient(135deg, #1f1f1f, #121212);
+     background-color: #191919;
      color: #ffffff;
      display: flex;
-     height: 100vh;
      justify-content: center;
-     align-items: center;
+     padding: 60px 0;
  }
 
  .container {
@@ -25,7 +24,7 @@
 
  h1 {
      text-align: center;
-     margin-bottom: 30px;
+     margin-bottom: 25px;
      font-size: 36px;
      color: #00d4ff;
  }
@@ -45,22 +44,88 @@
      background: #343434;
      color: white;
      outline: none;
+     transition: 0.3s;
+ }
+
+ #input:focus {
+     border: 1px solid #00d4ff;
+     background: #3d3a3a;
  }
 
  #addbtn {
      padding: 12px 20px;
-     background-color: #1d9929;
+     background: linear-gradient(135deg, #00c6ff, #0072ff);
      border: none;
      border-radius: 8px;
      color: white;
      font-size: 15px;
      font-weight: bold;
      cursor: pointer;
-     transition: background 0.3s;
+     transition: all 0.3s ease;
  }
 
  #addbtn:hover {
-     background-color: #12e027;
+     transform: translateY(-2px) scale(1.05);
+     box-shadow: 0 0 10px #00b7ff;
+ }
+
+
+ .middle {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin: 20px 0;
+ }
+
+ .filters {
+     display: flex;
+     gap: 10px;
+ }
+
+ .filters a {
+     padding: 6px 12px;
+     border-radius: 6px;
+     text-decoration: none;
+     font-size: 14px;
+     font-weight: bold;
+     background: #3a3a3a;
+     color: white;
+     transition: 0.3s;
+ }
+
+ .filters a:not(.active):hover {
+     background: #5bc0de;
+     color: #000;
+     box-shadow: 0 0 8px #25b5e5;
+     transform: scale(1.05);
+ }
+
+
+ .filters a.active {
+     background-color: #04c3e9;
+     ;
+     color: white;
+     font-weight: bold;
+     border-radius: 6px;
+     transition: 0.2s;
+ }
+
+ .deleteall {
+     padding: 8px 12px;
+     font-size: 14px;
+     font-weight: bold;
+     color: #fff;
+     background: linear-gradient(135deg, #ff4e4e, #cc0000);
+     border-radius: 8px;
+     text-decoration: none;
+     transition: 0.3s ease;
+     box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+ }
+
+
+ .deleteall:hover {
+     transform: scale(1.05);
+     box-shadow: 0 0 10px #e74c3c;
  }
 
  #empty {
@@ -79,21 +144,40 @@
  .todo {
      background: #1e1e1e;
      padding: 12px 15px;
-     border: none;
      border-radius: 10px;
+     align-items: center;
      display: flex;
      justify-content: space-between;
-     align-items: center;
      transition: 0.3s;
  }
 
  .todo:hover {
      background: #2b2b2b;
+     transform: scale(1.02);
+     box-shadow: 0 4px 10px rgba(15, 15, 15, 0.3);
+ }
+
+ .todo>div {
+     width: 90%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .todo span {
+     font-size: 18px;
+     word-break: break-word;
+ }
+
+ .todo .completed {
+     text-decoration: line-through;
+     color: #888;
+     opacity: 0.7;
  }
 
  .btns {
      display: flex;
-     gap: 10px;
+     gap: 8px;
  }
 
  .btns button {
@@ -102,22 +186,60 @@
      padding: 6px 10px;
      border-radius: 6px;
      cursor: pointer;
-     font-size: 14px;
+     font-size: 13px;
+     text-decoration: none;
      transition: 0.3s;
+     font-weight: bold;
  }
 
  .btns .edit {
-     background-color: #09c71c;
+     background-color: #14b524;
  }
 
  .btns .delete {
-     background-color: #ff0000;
+     background: #b21200;
  }
 
  .btns .edit:hover {
-     background-color: #068e14;
+     background: #2ecc71;
+     box-shadow: 0 0 8px #27ae60;
+     transform: scale(1.05);
  }
 
  .btns .delete:hover {
-     background-color: #a60808;
+     background: #ff2e2e;
+     box-shadow: 0 0 8px #e74c3c;
+     transform: scale(1.05);
+ }
+
+ .check {
+     border: 2px solid #555;
+     border-radius: 50%;
+     width: 22px;
+     height: 22px;
+     cursor: pointer;
+     appearance: none;
+     background-color: transparent;
+     transition: all 0.3s ease;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .check:hover {
+     border-color: #00d4ff;
+ }
+
+ .check:checked {
+     background-color: #27ae60;
+     border-color: #27ae60;
+     transform: scale(1.1);
+     box-shadow: 0 0 6px #27ae60;
+ }
+
+ .check:checked::after {
+     content: "✔";
+     color: white;
+     font-size: 14px;
+     font-weight: bold;
  }
