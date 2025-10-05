@@ -3,19 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Projects</title>
+  <title>HTML, CSS, JS Projects | Shahid Khan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    /* ------------------- */
+    /* Custom Properties   */
+    /* ------------------- */
+    :root {
+      --bg-dark-start: #141e30;
+      --bg-dark-end: #243b55;
+      --primary-gradient-start: #00c6ff;
+      --primary-gradient-end: #ff6ec4;
+      --card-bg-dark: rgba(30, 41, 59, 0.6);
+      --card-border-light: rgba(255, 255, 255, 0.15);
+      --card-border-hover: rgba(56, 189, 248, 0.5);
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+    }
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #141e30, #243b55);
-      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, var(--bg-dark-start), var(--bg-dark-end), #0f172a, #243b55);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: var(--text-light);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -23,107 +42,304 @@
       padding: 40px 20px;
     }
 
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header {
+      width: 100%;
+      max-width: 1200px;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-      font-size: 2.5rem;
-      text-align: center;
-      background: linear-gradient(90deg, #00c6ff, #ff6ec4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .socials {
-      display: flex;
+      margin: 0 auto 60px auto;
       gap: 20px;
     }
 
-    .socials a {
-      color: #fff;
-      font-size: 1.6rem;
-      transition: all 0.3s ease;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-light);
     }
 
-    .socials a:hover {
-      color: #00c6ff;
-      transform: scale(1.2);
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .card {
+    .github-btn {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      background-size: 200% 200%;
+      animation: buttonGradient 3s ease infinite;
+      color: #0f172a;
+      padding: 10px 18px;
+      border-radius: 8px;
       text-decoration: none;
-      color: #fff;
-      padding: 30px 20px;
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 1.1rem;
-      font-weight: 500;
+      font-weight: 600;
+      border: none;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    .card:hover {
-      transform: translateY(-8px) scale(1.05);
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    .github-btn:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transform: translateY(-2px);
+      background-position: right center;
     }
 
-    .card span {
-      font-size: 2rem;
-      margin-bottom: 10px;
+    @keyframes buttonGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       text-align: center;
-      font-size: 0.9rem;
-      color: #bbb;
+      color: var(--text-muted);
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-socials a {
+      color: var(--text-muted);
+      font-size: 1.8rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-socials a:hover {
+      color: var(--primary-gradient-start);
+      transform: translateY(-3px);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      background: var(--card-bg-dark);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid var(--card-border-light);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+
+    .card-img-container {
+        padding: 16px 16px 0 16px;
+        overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9; 
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .card-body h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .card-links a {
+      color: var(--text-muted);
+      font-size: 1.6rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .card-links a:hover {
+      color: #38bdf8;
+      transform: translateY(-2px);
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+        h1 {
+            font-size: 1.8rem;
+        }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1> HTML-CSS-JS Projects</h1>
-    <div class="socials">
-      <a href="https://github.com/shahidx05" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://x.com/shahidx_05" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/shahidx05/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
+    <h1>HTML-CSS-JS Projects</h1>
+    <a href="https://github.com/shahidx05/JavaScript-projects" target="_blank" class="github-btn" title="Star this repository on GitHub">
+      <i class="fab fa-github"></i> Star on GitHub
+    </a>
   </header>
 
-  <div class="projects">
-    <a class="card" href="Weather App/"><span>🌦</span> Weather App</a>
-    <a class="card" href="To Do APP/"><span>📝</span> Todo App</a>
-    <a class="card" href="Currency Converter/"><span>💱</span> Currency Converter</a>
-    <a class="card" href="Guess the number/"><span>🔢</span> Guess Number Game</a>
-    <a class="card" href="Tic Tac Toe/"><span>❌⭕</span> Tic Tac Toe</a>
-    <a class="card" href="Calculator/"><span>🧮</span> Calculator</a>
-    <a class="card" href="Digital Clock/"><span>🕒</span> Digital Clock</a>
-    <a class="card" href="Random color/"><span>🎨</span> Random Color Generator</a>
-    <a class="card" href="Card Creator/"><span>📇</span> Profile Card Maker</a>
-  </div>
+  <main class="projects-grid">
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/weather.png" alt="Weather App Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Weather App</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Weather%20App" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Weather App/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/todo.png" alt="Todo App Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Todo App</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/To%20Do%20APP" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="To Do APP/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/currency.png" alt="Currency Converter Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Currency Converter</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Currency%20Converter" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Currency Converter/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/guess.png" alt="Guess the Number Game Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Guess Number Game</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Guess%20the%20number" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Guess the number/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/tictactoe.png" alt="Tic Tac Toe Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Tic Tac Toe</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Tic%20Tac%20Toe" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Tic Tac Toe/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/calc.png" alt="Calculator Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Calculator</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Calculator" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Calculator/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/clock.png" alt="Digital Clock Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Digital Clock</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Digital%20Clock" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Digital Clock/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/color.png" alt="Random Color Generator Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Random Color Generator</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Random%20color" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Random color/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-container">
+        <img src="images/profilecard.png" alt="Profile Card Maker Thumbnail">
+      </div>
+      <div class="card-body">
+        <h3>Profile Card Maker</h3>
+        <div class="card-links">
+          <a href="https://github.com/shahidx05/JavaScript-projects/tree/main/Card%20Creator" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+          <a href="Card Creator/" aria-label="Live Preview" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+    
+  </main>
 
   <footer>
-    <p>Made with ❤️ by  Shahid Khan</p>
+    <div class="footer-socials">
+      <a href="https://github.com/shahidx05" target="_blank" aria-label="GitHub Profile" title="GitHub Profile"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/shahidx_05" target="_blank" aria-label="X/Twitter Profile" title="X/Twitter Profile"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/shahidx05/" target="_blank" aria-label="LinkedIn Profile" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>Made with ❤️ by Shahid Khan</p>
   </footer>
+
 </body>
 </html>
