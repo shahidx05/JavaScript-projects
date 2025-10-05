@@ -13,34 +13,16 @@ function updateEmpty() {
 }
 
 function saveTodos() {
-    const todos = []
-
-    const existing = JSON.parse(localStorage.getItem("todos")) || [];
-
-    const updated = {};
-    todolist.querySelectorAll('.todo').forEach(todo => {
-        const span = todo.querySelector('span');
-        const checkbox = todo.querySelector('input[type="checkbox"]');
-        updated[span.innerText] = checkbox.checked;
-    })
-
-    existing.forEach(t => {
-        if (updated.hasOwnProperty(t.title)) {
-            todos.push({ title: t.title, check: updated[t.title] });
-        } else {
-            todos.push(t);
-        }
+    const todos = [];
+    todolist.querySelectorAll('.todo').forEach(todoEl => {
+        const span = todoEl.querySelector('span');
+        const checkbox = todoEl.querySelector('input[type="checkbox"]');
+        todos.push({
+            title: span.innerText,
+            check: checkbox.checked
+        });
     });
-
-    todolist.querySelectorAll(".todo").forEach(todo => {
-        const span = todo.querySelector("span");
-        if (!existing.some(e => e.title === span.innerText)) {
-            const checkbox = todo.querySelector('input[type="checkbox"]');
-            todos.push({ title: span.innerText, check: checkbox.checked });
-        }
-    });
-
-    localStorage.setItem('todos', JSON.stringify(todos))
+    localStorage.setItem('todos', JSON.stringify(todos.reverse()));
 }
 
 function loadTodos(Currfilter = "All") {
@@ -83,6 +65,7 @@ function createTodo(value, check = false) {
     checkbox.addEventListener('change', () => {
         span.classList.toggle("completed", checkbox.checked);
         saveTodos();
+        loadTodos(filter);
     })
 
     del.addEventListener('click', () => {
@@ -100,7 +83,7 @@ function createTodo(value, check = false) {
     edit.addEventListener('click', () => {
         input.value = span.innerText;
         editTodo = span;
-        add.textContent = 'edit'
+        add.textContent = 'Edit'
         add.style.background = 'linear-gradient(135deg, #ffb300ff, #fff200ff)';
     })
 
@@ -108,7 +91,7 @@ function createTodo(value, check = false) {
     btns.append(edit, del)
     div.append(span, btns)
     todo.append(checkbox, div)
-    todolist.prepend(todo)
+    todolist.appendChild(todo)
 }
 
 add.addEventListener('click', () => {
@@ -116,13 +99,7 @@ add.addEventListener('click', () => {
     if (!value) return;
 
     if (editTodo) {
-        const oldValue = editTodo.innerText;
         editTodo.innerText = value;
-
-        const todos = JSON.parse(localStorage.getItem("todos")) || [];
-        todos.forEach(t => {
-            if (t.title === oldValue) t.title = value;
-        });
 
         editTodo = null;
         add.textContent = 'Add';
@@ -130,12 +107,10 @@ add.addEventListener('click', () => {
     }
     else {
         createTodo(value)
-        const todos = JSON.parse(localStorage.getItem("todos")) || [];
-        todos.push({ title: value, check: false });
-        localStorage.setItem("todos", JSON.stringify(todos));
     }
+    saveTodos()
     input.value = '';
-    updateEmpty();
+    updateEmpty()
 });
 
 filterbtns.forEach(btn => {
